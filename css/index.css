@@ -1,0 +1,130 @@
+#page {
+	background-image: url("../images/mainPage.jpg");
+	background-size: cover;
+	height: 100vh;
+}
+
+#brand-link {
+	text-decoration: none;
+}
+
+.brand-logo {
+	margin-left: 80px;
+	font-family: 'Raleway', sans-serif;
+	margin-top: 3px;
+}
+
+#navbar {
+	background-color: #232121;
+	height: 70px;
+}
+
+.links {
+	margin-right: 20px;
+	font-family: 'Raleway', sans-serif;
+	border-radius: 5px;
+}
+
+.links:hover {
+	background-color: #31CBDA;
+	color: white;
+	text-decoration: none;
+}
+
+.sidebar {
+  float: left;
+  width: 300px;
+  height: 100vh;
+  margin-left: -300px;
+  transition: 0.7s all;
+}
+
+.side {
+  margin-left: 0;
+}
+
+.sideItems {
+ padding: 10px 20px;
+ font-size: 20px;
+ display: block;
+ position: relative;
+ cursor: pointer;
+}
+
+#first {
+	margin-top: 80px;
+}
+
+.sideItems:hover {
+	background-color: #31CBDA;
+	transition: 0.6s all;
+}
+
+.sideLinks {
+	color: white;
+	text-decoration: none;
+	margin-left: 50px;
+}
+
+.sideLinks:hover {
+	text-decoration: none;
+	color: white;
+}
+
+.sidebar .sideLinks .sideIcons {
+	position: absolute;
+	font-size: 30px;
+}
+
+.sideBtn {
+  float: left;
+  padding: 3px 25px;
+  font-size: 40px;
+  text-decoration: none;
+  font-family: Ionicons;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+}
+
+.sideBtn:before {
+  content: "\f32a";
+  
+}
+
+.btnc:before {
+  content: "\f2c0";
+}
+
+#main-title {
+	color: white;
+	margin-top: 15%;
+	font-size: 105px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+}
+
+
+#sub {
+	color: white;
+	margin-top: 1%;
+	font-size: 25px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+}
+
+#join-us {
+	background-color: #31CBDA;
+	margin-top: 4%;
+	margin-left: 43%;
+	height: 70px;
+	width: 200px;
+	font-size: 27px;
+	border-radius: 10px;
+	padding-top: 16px;
+	font-weight: 500;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	margin-bottom: 15%;
+	text-transform: capitalize;
+}
