@@ -1,3 +1,7 @@
+<?php
+	include("config.php");
+?>
+
 <!DOCTYPC html>
 <html>
 <head>
