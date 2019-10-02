@@ -6,17 +6,17 @@
 <html>
 <head>
 	<title>Albums</title>
-	<link rel="stylesheet" type="text/css" href="../css/index.css">
-	<link rel="stylesheet" type="text/css" href="../css/materialize.css">
-	<link rel="stylesheet" type="text/css" href="../css/hover-min.css">
-	<link rel="stylesheet" type="text/css" href="../css/fa-svg-with-js.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="css/hover-min.css">
+	<link rel="stylesheet" type="text/css" href="css/fa-svg-with-js.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://unpkg.com/ionicons@4.4.6/dist/css/ionicons.min.css" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="../js/materialize.js"></script>
-	<script type="text/javascript" src="../js/fontawesome-all.min.js"></script>
-	<script type="text/javascript" src="../js/index.js"></script>
+	<script type="text/javascript" src="js/materialize.js"></script>
+	<script type="text/javascript" src="js/fontawesome-all.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
 
