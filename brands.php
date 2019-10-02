@@ -46,10 +46,10 @@
 	    </nav>
 	</div>
 
-	<div class="albumContainer grey darken-4">
+	<div class="albumContainer">
 		<div class="row">
 			<div class="col s12 m12 l12">
-				<h3 id="albumHead" align="center">Explore the Albums</h3>
+				<h3 id="albumHead" align="center">Explore the Brands</h3>
 			</div>
 		</div>
         <!-- <a href='album.php?Album_id=" .$row['Album_id']. "'> -->
@@ -57,7 +57,7 @@
 			$albumQuery = mysqli_query($con, "SELECT * FROM brands");
 
 			while ($row = mysqli_fetch_array($albumQuery)) {
-				echo " <div class='gridViewItem'>
+				echo " <div class='hvr-shrink gridViewItem'>
 							
 								<img class='circle' src=' ". $row['brand_logo']. " '>
 								<div class='gridViewInfo' align='center'> " 

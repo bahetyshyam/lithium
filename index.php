@@ -1,7 +1,3 @@
-<?php
-	include("config.php");
-?>
-
 <!DOCTYPC html>
 <html>
 <head>
@@ -52,13 +48,21 @@
 
 	
 
-	<div id="page">
+	<div id="page1">
 		<div class="row">
 			<div class="col s12 m12 l12">
 				<h2 id="main-title" align="center">Welcome To Lithium</h2>
 				<p id="sub" align="center">If it ain't broke, don't fix it</p>
 				<!--<a id="join-us" class="waves-effect waves-light btn" href="#">Join Us</a> -->
 			</div>
+		</div>
+	</div>
+	<div id="page2">
+		<div class="row">
+			<div class="page2-info col m6 l6">
+				<p class="hvr-shrink">Lithium is a platform to help you decide your next smartphone. This platform showcases information regarding various brands and categories, such that you can make an informed decision to buy your smartphone from your preffered seller.</p>
+			</div>
+			<div class="image-section col m6 l6"></div>
 		</div>
 	</div>
 </body>
