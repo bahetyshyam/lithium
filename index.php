@@ -22,7 +22,7 @@
 
 	        <div class="sidebar black">
 	        	<div class="sideItems" id="first">
-	        		<a class="sideLinks" href="Search.php"><i class="medium sideIcons material-icons">search</i>Search</a>
+	        		<a class="sideLinks" href="brands.php"><i class="medium sideIcons material-icons">search</i>Brands</a>
 	        	</div>
 	        	<div class="sideItems">
 	        		<a class="sideLinks" href="webpages/albums.php"><i class="medium sideIcons material-icons">music_note</i>Albums</a>
