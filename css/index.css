@@ -149,10 +149,11 @@ body {
 #Head {
 	font-size: 60px;
 	margin: 5% 0%;
+	font-weight: 600;
 }
 
 .gridViewItem {
-	margin-left: 10%;
+	margin-left: 9%;
 	margin-right: 6%;
 	margin-bottom: 3%;
 	display: inline-block;
@@ -166,16 +167,34 @@ body {
 }
 
 .catName h2{
-	font-size: 30px;
+	font-size: 40px;
 	text-align: center;
-	margin-top: 90px;
+	margin-top: 190px;
+	margin-bottom: 60px;
+	font-weight: 500;
 }
 
 .catImage {
 	height: 800px;
 }
 
+.cat-right {
+	padding: 30px 10px 10px 10px;
+}
+
 .cat-left {
-	background-color: #455a64;
-	padding: 40px;
+	background-color: #212121;
+	padding: 30px 10px 10px 10px;
+}
+
+.cat-left, .cat-right {
+	height: 90vh;
+}
+
+#left-data-h2, #left-data-p {
+	color: white;
+}
+
+.catName p {
+	font-size: 21px;
 }

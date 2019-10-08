@@ -23,7 +23,7 @@
 	<div class="navbar-fixed">
 	    <nav id="navbar" class="black">
 	      <div class="nav-wrapper">
-	        <a href="../index.php" id="brand-link" class="brand-logo">Fireflies</a>
+	        <a href="../index.php" id="brand-link" class="brand-logo">Lithium</a>
 
 	        <div class="sidebar black">
 	        	<div class="sideItems" id="first">
