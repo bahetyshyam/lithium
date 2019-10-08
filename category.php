@@ -19,7 +19,6 @@
 	<script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
-
 	<div class="navbar-fixed">
 	    <nav id="navbar" class="black">
 	      <div class="nav-wrapper">
@@ -46,29 +45,42 @@
 	    </nav>
 	</div>
 
-	<div class="albumContainer">
+	<div class="categoryContainer">
 		<div class="row">
 			<div class="col s12 m12 l12">
-				<h3 id="Head" align="center">Explore the Brands</h3>
+				<h3 id="Head" align="center">Smartphone categories</h3>
 			</div>
 		</div>
-        <!-- <a href='album.php?Album_id=" .$row['Album_id']. "'> -->
-		<?php
-			$albumQuery = mysqli_query($con, "SELECT * FROM brands");
 
-			while ($row = mysqli_fetch_array($albumQuery)) {
-				echo " <div class='hvr-shrink gridViewItem'>
-							
-								<img class='circle' src=' ". $row['brand_logo']. " '>
-								<div class='gridViewInfo' align='center'> " 
-									. $row['brand_name'] . "
-								</div>
-							</a>   
-						</div>";	
+		<?php
+			$categoryQuery = mysqli_query($con, "SELECT * FROM category");
+			$count = 0;
+
+			while ($row = mysqli_fetch_array($categoryQuery)) {
+				if($count == 0) {
+					echo " <div class='row cat-right'>
+							<div class='col m4 l5 catName'> <h2>" 
+								. $row['category_name'] . "</h2>
+							</div>
+							<div class='col m8 l7 second'>
+								<img class='catImage' src=' ". $row['category_photo']. " '>
+							</div>
+						</div>";
+					$count = 1;
+				}
+				else {
+					echo " <div class='row cat-left'>
+							<div class='col m8 l7 second'>
+								<img class='catImage' src=' ". $row['category_photo']. " '>
+							</div>
+							<div class='col m4 l5 catName'> <h2>" 
+								. $row['category_name'] . "</h2>
+							</div>
+						</div>";
+					$count = 0;
+				}
 			}
 		?>
-
-	</div>
 </body>
 <script type="text/javascript" src="../js/index.js"></script>
 </html>
