@@ -22,7 +22,7 @@
 	<div class="navbar-fixed">
 	    <nav id="navbar" class="black">
 	      <div class="nav-wrapper">
-	        <a href="../index.php" id="brand-link" class="brand-logo">Fireflies</a>
+	        <a href="../index.php" id="brand-link" class="brand-logo">Lithium</a>
 
 	        <div class="sidebar black">
 	        	<div class="sideItems" id="first">
@@ -59,8 +59,9 @@
 			while ($row = mysqli_fetch_array($categoryQuery)) {
 				if($count == 0) {
 					echo " <div class='row cat-right'>
-							<div class='col m4 l5 catName'> <h2>" 
-								. $row['category_name'] . "</h2>
+							<div class='col m4 l5 catName'>
+							<h2>" . $row['category_name'] . "</h2>
+							<p>" . $row['category_desc'] . "</p>
 							</div>
 							<div class='col m8 l7 second'>
 								<img class='catImage' src=' ". $row['category_photo']. " '>
@@ -73,8 +74,9 @@
 							<div class='col m8 l7 second'>
 								<img class='catImage' src=' ". $row['category_photo']. " '>
 							</div>
-							<div class='col m4 l5 catName'> <h2>" 
+							<div class='col m4 l5 catName'> <h2 id='left-data-h2'>" 
 								. $row['category_name'] . "</h2>
+								<p id='left-data-p'>" . $row['category_desc'] . "</p>
 							</div>
 						</div>";
 					$count = 0;
