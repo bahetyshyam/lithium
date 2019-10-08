@@ -46,10 +46,10 @@
     
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col m6 l6">
                 1st coloumn containing the image of the mobile
             </div>
-            <div class="col-md-6">
+            <div class="col m6 l6">
                 2nd coloumn containing the specs
             </div>
         </div>
