@@ -183,6 +183,12 @@ body {
 }
 
 .cat-left {
+	background-color: #455a64;
+	padding: 40px;
+}
+
+.imageContainer {
+	padding-left: 25%;
 	background-color: #212121;
 	padding: 30px 10px 10px 10px;
 }
@@ -199,22 +205,23 @@ body {
 	font-size: 21px;
 }
 
-#mobile-desc h2 {
+/* #mobile-desc h2 {
 	margin-left: 100px;
 	margin-top: 45px;
-}
+} */
 
 #mobile-desc {
-	padding: 4% 0 3% 12%;
+	padding: 4% 12% 3% 12%;
 }
 
 #mobile-spec {
 	height: 100vh;
+	padding-top : 4%;
 }
 
 #mobile-spec h2 {
 	color: white;
-	margin: 30% 0 8% 0;
+	margin: 0% 0 8% 0;
 
 }
 
@@ -226,4 +233,8 @@ body {
 	padding: 0 10% 1% 15%;
 	font-size: 20px;
 
+}
+
+#mobile-desc img {
+	max-width : 100%; height : auto;
 }

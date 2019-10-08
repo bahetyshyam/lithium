@@ -47,7 +47,7 @@
     
     <div class="mobileContainer">
     	<?php
-			$mobileQuery = mysqli_query($con, "SELECT * FROM mobile WHERE mobile_id=2");
+			$mobileQuery = mysqli_query($con, "SELECT * FROM mobile WHERE mobile_id=12");
 			while ($row = mysqli_fetch_array($mobileQuery)) {
 
 if($row['mobile_soc'] == '')
@@ -55,8 +55,8 @@ if($row['mobile_soc'] == '')
 				
 				echo "<div class='row'>
 						<div id='mobile-desc' class='col m7 l7'>
-							<img src=' ".  $row['mobile_picture'] ."'>
-							<h2>". $row['mobile_name'] ." </h2>
+							<img src=' ".  $row['mobile_picture'] ."' class = 'img-fluid'>
+							<h2 align = 'center'>". $row['mobile_name'] ." </h2>
 						</div>
 						<div id='mobile-spec' class='col m5 l5 grey darken-4'>
 							<h2 align='center'>Specifications</h2>
