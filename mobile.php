@@ -28,31 +28,23 @@
 
 	        <div class="sidebar black">
 	        	<div class="sideItems" id="first">
-	        		<a class="sideLinks" href="../search.php"><i class="medium sideIcons material-icons">search</i>Search</a>
+	        		<a class="sideLinks" href="brands.php"><i class="medium sideIcons material-icons">search</i>Brands</a>
 	        	</div>
 	        	<div class="sideItems">
-	        		<a class="sideLinks" href="../genre.php"><i class="medium sideIcons material-icons">music_note</i>Genre</a>
-	        	</div>
-	        	<div class="sideItems">
-	        		<a class="sideLinks" href="../playlist.php"><i class="medium sideIcons material-icons">library_music</i>Playlists</a>
-	        	</div>
-	        	<div class="sideItems">
-	        		<a class="sideLinks" href="../queries.php"><i class="medium sideIcons material-icons">question_answer</i>Queries</a>
-	        	</div>	
+	        		<a class="sideLinks" href="category.php"><i class="medium sideIcons material-icons">folder</i>Categories</a>
+	        	</div>			
 			</div>
+
 			<a class="sideBtn"></a>
 	      </div>
 	    </nav>
     </div>
     
-    <div class="mobileContainer">
+    <div class="mobi
+    leContainer">
     	<?php
-			$mobileQuery = mysqli_query($con, "SELECT * FROM mobile WHERE mobile_id=12");
-			while ($row = mysqli_fetch_array($mobileQuery)) {
-
-if($row['mobile_soc'] == '')
-								echo "Hello World";
-				
+			$mobileQuery = mysqli_query($con, "SELECT * FROM mobile WHERE mobile_id=1");
+			while ($row = mysqli_fetch_array($mobileQuery)) {				
 				echo "<div class='row'>
 						<div id='mobile-desc' class='col m7 l7'>
 							<img src=' ".  $row['mobile_picture'] ."' class = 'img-fluid'>
@@ -73,6 +65,8 @@ if($row['mobile_soc'] == '')
 							<div class='spec-items'>
 								<p class='spec-desc'><i style='margin-right: 20px; font-size: 30px;' class='sideIcons fas fa-battery-three-quarters'></i> ". $row['mobile_battery'] ."</p>
 							</div>
+							<a href=' " . $row['mobile_flipkart'] ." ' id='brand-btn' class='waves-effect waves-light btn'><img class='circle brand-icon' src='assets/images/flipkart.jpg'>Flipkart</a>
+							<a href=' " . $row['mobile_amazon'] ." ' id='brand-btn' class='waves-effect waves-light btn'><img class='circle brand-icon' src='assets/images/amazon.jpg'>Amazon</a>
 						</div>
 					</div>";
 			}
@@ -80,5 +74,10 @@ if($row['mobile_soc'] == '')
 		?>
     </div>
 </body>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/materialize.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 </html>

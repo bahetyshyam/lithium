@@ -23,21 +23,15 @@
 	<div class="navbar-fixed">
 	    <nav id="navbar" class="black">
 	      <div class="nav-wrapper">
-	        <a href="../index.php" id="brand-link" class="brand-logo">Fireflies</a>
+	        <a href="index.php" id="brand-link" class="brand-logo">Fireflies</a>
 
 	        <div class="sidebar black">
 	        	<div class="sideItems" id="first">
-	        		<a class="sideLinks" href="../search.php"><i class="medium sideIcons material-icons">search</i>Search</a>
+	        		<a class="sideLinks" href="brands.php"><i class="medium sideIcons material-icons">search</i>Brands</a>
 	        	</div>
 	        	<div class="sideItems">
-	        		<a class="sideLinks" href="../genre.php"><i class="medium sideIcons material-icons">music_note</i>Genre</a>
-	        	</div>
-	        	<div class="sideItems">
-	        		<a class="sideLinks" href="../playlist.php"><i class="medium sideIcons material-icons">library_music</i>Playlists</a>
-	        	</div>
-	        	<div class="sideItems">
-	        		<a class="sideLinks" href="../queries.php"><i class="medium sideIcons material-icons">question_answer</i>Queries</a>
-	        	</div>	
+	        		<a class="sideLinks" href="category.php"><i class="medium sideIcons material-icons">folder</i>Categories</a>
+	        	</div>			
 			</div>
 
 			<a class="sideBtn"></a>
@@ -70,5 +64,10 @@
 
 	</div>
 </body>
-<script type="text/javascript" src="../js/index.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/materialize.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
 </html>

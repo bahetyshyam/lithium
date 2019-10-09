@@ -25,17 +25,8 @@
 	        		<a class="sideLinks" href="brands.php"><i class="medium sideIcons material-icons">search</i>Brands</a>
 	        	</div>
 	        	<div class="sideItems">
-	        		<a class="sideLinks" href="webpages/albums.php"><i class="medium sideIcons material-icons">music_note</i>Albums</a>
-	        	</div>
-	        	<div class="sideItems">
-	        		<a class="sideLinks" href="playlist.php"><i class="medium sideIcons material-icons">library_music</i>Playlists</a>
-	        	</div>
-	        	<div class="sideItems">
-	        		<a class="sideLinks" href="genre.php"><i class="medium sideIcons material-icons">library_music</i>Genre</a>
-	        	</div>
-	        	<div class="sideItems">
-	        		<a class="sideLinks" href="queries.php"><i class="medium sideIcons material-icons">library_music</i>Queries</a>
-	        	</div>				
+	        		<a class="sideLinks" href="webpages/albums.php"><i class="medium sideIcons material-icons">folder</i>Categories</a>
+	        	</div>			
 			</div>
 
 			<a class="sideBtn"></a>
