@@ -43,7 +43,7 @@
     <div class="mobi
     leContainer">
     	<?php
-			$mobileQuery = mysqli_query($con, "SELECT * FROM mobile WHERE mobile_id=1");
+			$mobileQuery = mysqli_query($con, "SELECT * FROM mobile WHERE mobile_id=8");
 			while ($row = mysqli_fetch_array($mobileQuery)) {				
 				echo "<div class='row'>
 						<div id='mobile-desc' class='col m7 l7'>
@@ -64,10 +64,14 @@
 							</div>
 							<div class='spec-items'>
 								<p class='spec-desc'><i style='margin-right: 20px; font-size: 30px;' class='sideIcons fas fa-battery-three-quarters'></i> ". $row['mobile_battery'] ."</p>
-							</div>
-							<a href=' " . $row['mobile_flipkart'] ." ' id='brand-btn' class='waves-effect waves-light btn'><img class='circle brand-icon' src='assets/images/flipkart.jpg'>Flipkart</a>
-							<a href=' " . $row['mobile_amazon'] ." ' id='brand-btn' class='waves-effect waves-light btn'><img class='circle brand-icon' src='assets/images/amazon.jpg'>Amazon</a>
-						</div>
+							</div>";
+							if($row['mobile_flipkart'] != '') {
+								echo "<a href=' " . $row['mobile_flipkart'] ." ' id='brand-btn' class='waves-effect waves-light btn'><img class='circle brand-icon' src='assets/images/flipkart.jpg'>Flipkart</a>";
+							}
+							if($row['mobile_amazon'] != '') {
+								echo "<a href=' " . $row['mobile_amazon'] ." ' id='brand-btn' class='waves-effect waves-light btn'><img class='circle brand-icon' src='assets/images/amazon.jpg'>Amazon</a>";
+							}
+						echo "</div>
 					</div>";
 			}
 
