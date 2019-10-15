@@ -1,5 +1,17 @@
 <?php
 	include("config.php");
+	include("assets/classes/Brand.php");
+	include("assets/classes/Mobile.php");
+
+	if(isset($_GET['brand_id'])) {
+			$brandId = $_GET['brand_id'];
+	}	 
+	else {
+	 	echo "Not Found";	
+	 }
+
+	$brand = new Brand($con, $brandId);
+	$mobile = new Mobile($con, $brandId);
 ?>
 
 <!DOCTYPE html>
@@ -41,33 +53,26 @@
 	</div>
 
 	<div class="albumContainer">
-		<div class="row">
-			<div class="col s12 m12 l12">
-				<h3 id="Head" align="center">Explore the Brands</h3>
-			</div>
-		</div>
-        <!-- <a href='album.php?Album_id=" .$row['Album_id']. "'> -->
-		<?php
-			$albumQuery = mysqli_query($con, "SELECT * FROM brands");
-
-			while ($row = mysqli_fetch_array($albumQuery)) {
-				echo " <div class='hvr-shrink gridViewItem'>
-							<a href='brand.php?brand_id=" .$row['brand_id']. "'>
-								<img class='circle' src=' ". $row['brand_logo']. " '>
-								<div class='gridViewInfo' align='center'> " 
-									. $row['brand_name'] . "
+		<div class="entity">
+			<h1 id="Head" align="center"><?php echo $brand->getTitle(); ?></h1>
+			<?php
+				$query = $mobile->getQuery();
+				while($row = mysqli_fetch_array($query)) {
+					echo "
+						<div class='hvr-shrink gridViewItemMobile'>
+							<a href='mobile.php?mobile_id=" .$row['mobile_id']. "'>
+								<img class='brandImage' src=' ". $row['mobile_picture']. " '>
+								<div class='gridViewInfoMobile'> " 
+									. $row['mobile_name'] . "
 								</div>
 							</a>   
-						</div>";	
-			}
-		?>
+						</div>;
+					";
+				}
+			?>
+			
+		</div>
 
-	</div>
-</body>
-<script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
-<script type="text/javascript" src="js/materialize.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
-</html>
+
+
+

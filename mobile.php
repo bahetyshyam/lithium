@@ -1,5 +1,15 @@
 <?php
 	include("config.php");
+	include("assets/classes/Mobile.php");
+
+	if(isset($_GET['mobile_id'])) {
+			$mobileId = $_GET['mobile_id'];
+	}	 
+	else {
+	 	echo "Not Found";	
+	 }
+
+	$mobile = new Mobile($con, $mobileId);
 ?>
 
 <!DOCTYPE html>
@@ -40,42 +50,41 @@
 	    </nav>
     </div>
     
-    <div class="mobi
-    leContainer">
-    	<?php
-			$mobileQuery = mysqli_query($con, "SELECT * FROM mobile WHERE mobile_id=8");
-			while ($row = mysqli_fetch_array($mobileQuery)) {				
-				echo "<div class='row'>
+    <div class="mobileContainer">
+			
+			<div class='row'>
 						<div id='mobile-desc' class='col m7 l7'>
-							<img src=' ".  $row['mobile_picture'] ."' class = 'img-fluid'>
-							<h2 align = 'center'>". $row['mobile_name'] ." </h2>
+							<img src='<?php echo $mobile->getPicture() ?>'  class = 'img-fluid'>
+							<h2 align = 'center'><?php echo $mobile->getTitle() ?></h2>
 						</div>
 						<div id='mobile-spec' class='col m5 l5 grey darken-4'>
 							<h2 align='center'>Specifications</h2>
 
 							<div class='spec-items'>
-								<p class='spec-desc'><i style='margin-right: 20px; font-size: 30px;' class='sideIcons fas fa-microchip'></i> ". $row['mobile_soc'] ."</p>
+								<p class='spec-desc'><i style='margin-right: 20px; font-size: 30px;' class='sideIcons fas fa-microchip'></i><?php echo $mobile->getSoc() ?></p>
 							</div>
 							<div class='spec-items'>
-								<p class='spec-desc'><i style='margin-right: 20px; font-size: 30px;' class='sideIcons fas fa-mobile-alt'></i> ". $row['mobile_display'] ."</p>
+								<p class='spec-desc'><i style='margin-right: 20px; font-size: 30px;' class='sideIcons fas fa-mobile-alt'></i><?php echo $mobile->getDisplay() ?></p>
 							</div>
 							<div class='spec-items'>
-								<p class='spec-desc'><i style='margin-right: 20px; font-size: 30px;' class='sideIcons fas fa-camera'></i> ". $row['mobile_camera'] ."</p>
+								<p class='spec-desc'><i style='margin-right: 20px; font-size: 30px;' class='sideIcons fas fa-camera'></i><?php echo $mobile->getCamera() ?></p>
 							</div>
 							<div class='spec-items'>
-								<p class='spec-desc'><i style='margin-right: 20px; font-size: 30px;' class='sideIcons fas fa-battery-three-quarters'></i> ". $row['mobile_battery'] ."</p>
-							</div>";
-							if($row['mobile_flipkart'] != '') {
-								echo "<a href=' " . $row['mobile_flipkart'] ." ' id='brand-btn' class='waves-effect waves-light btn'><img class='circle brand-icon' src='assets/images/flipkart.jpg'>Flipkart</a>";
-							}
-							if($row['mobile_amazon'] != '') {
-								echo "<a href=' " . $row['mobile_amazon'] ." ' id='brand-btn' class='waves-effect waves-light btn'><img class='circle brand-icon' src='assets/images/amazon.jpg'>Amazon</a>";
-							}
-						echo "</div>
+								<p class='spec-desc'><i style='margin-right: 20px; font-size: 30px;' class='sideIcons fas fa-battery-three-quarters'></i> <?php echo $mobile->getBattery() ?></p>
+							</div>
+							<?php 
+								$flip = $mobile->getFlipkart();
+								$amaz = $mobile->getAmazon();
+								if($flip != '') {
+									echo "<a href='$flip' id='brand-btn' class='waves-effect waves-light btn'><img class='circle brand-icon' src='assets/images/flipkart.jpg'>Flipkart</a>";
+								}
+								if($amaz != '') {
+									echo "<a href='$amaz' id='brand-btn' class='waves-effect waves-light btn'><img class='circle brand-icon' src='assets/images/amazon.jpg'>Amazon</a>";
+							} ?>
+						</div>
 					</div>";
 			}
 
-		?>
     </div>
 </body>
 <script

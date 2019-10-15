@@ -149,7 +149,7 @@ body {
 #Head {
 	font-size: 80px;
 	margin: 5% 0%;
-	font-weight: 600;
+	font-weight: 500;
 }
 
 .gridViewItem {
@@ -260,4 +260,20 @@ body {
 	font-size: 26px;
 	text-transform: capitalize;
 	color: #212121;
+}
+
+.brandImage {
+	width: 60%;
+	height: 60%;
+}
+
+.gridViewItemMobile {
+	margin: 3% 0 5% 12%;
+	display: inline-block;
+}
+
+.gridViewInfoMobile {
+	margin-top: 7%;
+	font-size: 20px;
+	margin-left: 15%;
 }
