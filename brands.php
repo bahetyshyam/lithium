@@ -19,18 +19,17 @@
 	<script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
-
 	<div class="navbar-fixed">
 	    <nav id="navbar" class="black">
 	      <div class="nav-wrapper">
-	        <a href="index.php" id="brand-link" class="brand-logo">Fireflies</a>
+	        <a href="index.php" id="brand-link" class="brand-logo">Lithium</a>
 
 	        <div class="sidebar black">
 	        	<div class="sideItems" id="first">
 	        		<a class="sideLinks" href="brands.php"><i class="medium sideIcons material-icons">search</i>Brands</a>
 	        	</div>
 	        	<div class="sideItems">
-	        		<a class="sideLinks" href="category.php"><i class="medium sideIcons material-icons">folder</i>Categories</a>
+	        		<a class="sideLinks" href="categories.php"><i class="medium sideIcons material-icons">folder</i>Categories</a>
 	        	</div>			
 			</div>
 
@@ -46,16 +45,15 @@
 				<h3 id="Head" align="center">Explore the Brands</h3>
 			</div>
 		</div>
-        <!-- <a href='album.php?Album_id=" .$row['Album_id']. "'> -->
 		<?php
 			$albumQuery = mysqli_query($con, "SELECT * FROM brands");
 
 			while ($row = mysqli_fetch_array($albumQuery)) {
 				echo " <div class='hvr-shrink gridViewItem'>
-							<a href='brand.php?brand_id=" .$row['brand_id']. "'>
+							<a class='categoryText' href='brand.php?brand_id=" .$row['brand_id']. "'>
 								<img class='circle' src=' ". $row['brand_logo']. " '>
-								<div class='gridViewInfo' align='center'> " 
-									. $row['brand_name'] . "
+								<div class='gridViewInfo' align='center'> <p>" 
+									. $row['brand_name'] . "</p>
 								</div>
 							</a>   
 						</div>";	

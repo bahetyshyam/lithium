@@ -10,7 +10,6 @@
 	<link href="https://unpkg.com/ionicons@4.4.6/dist/css/ionicons.min.css" rel="stylesheet">
 </head>
 <body>
-
 	<!--Navbar begins here -->
 	<div class="navbar-fixed ">
 	    <nav id="navbar" class="black">
@@ -25,7 +24,7 @@
 	        		<a class="sideLinks" href="brands.php"><i class="medium sideIcons material-icons">search</i>Brands</a>
 	        	</div>
 	        	<div class="sideItems">
-	        		<a class="sideLinks" href="webpages/albums.php"><i class="medium sideIcons material-icons">folder</i>Categories</a>
+	        		<a class="sideLinks" href="categories.php"><i class="medium sideIcons material-icons">folder</i>Categories</a>
 	        	</div>			
 			</div>
 
@@ -36,8 +35,6 @@
 
 	</div>
 	<!--Navbar ends here -->
-
-	
 
 	<div id="page1">
 		<div class="row">
@@ -62,5 +59,6 @@
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/materialize.js"></script>
+<script src="https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 </html>

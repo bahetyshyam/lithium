@@ -11,6 +11,7 @@
 		private $battery;
 		private $amazon;
 		private $flipkart;
+		private $review;
 
 		public function __construct($con, $id) {
 			$this->con = $con;
@@ -30,6 +31,7 @@
 			$this->battery = $mobile['mobile_battery'];
 			$this->amazon = $mobile['mobile_amazon'];
 			$this->flipkart = $mobile['mobile_flipkart'];
+			$this->review = $mobile['mobile_review'];
 		}
 
 		public function getTitle() {
@@ -66,6 +68,10 @@
 
 		public function getFlipkart() {
 			return $this->flipkart;
+		}
+
+		public function getReview() {
+			return $this->review;
 		}
 
 		public function getQuery() {

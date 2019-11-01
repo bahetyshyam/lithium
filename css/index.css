@@ -277,3 +277,11 @@ body {
 	font-size: 20px;
 	margin-left: 15%;
 }
+
+.categoryText {
+	color: black;
+}
+
+.videoContainer {
+	margin: 10% 0 7% 25%;
+}

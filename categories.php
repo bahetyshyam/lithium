@@ -1,17 +1,5 @@
 <?php
 	include("config.php");
-	include("assets/classes/Brand.php");
-	include("assets/classes/Mobile.php");
-
-	if(isset($_GET['brand_id'])) {
-			$brandId = $_GET['brand_id'];
-	}	 
-	else {
-	 	echo "Not Found";	
-	 }
-
-	$brand = new Brand($con, $brandId);
-	$mobile = new Mobile($con, $brandId);
 ?>
 
 <!DOCTYPE html>
@@ -51,27 +39,48 @@
 	    </nav>
 	</div>
 
-	<div class="albumContainer">
-		<div class="entity">
-			<h1 id="Head" align="center"><?php echo $brand->getTitle(); ?></h1>
-			<?php
-				$query = $mobile->getQuery();
-				while($row = mysqli_fetch_array($query)) {
-					echo "
-						<div class='hvr-shrink gridViewItemMobile'>
-							<a href='mobile.php?mobile_id=" .$row['mobile_id']. "'>
-								<img class='brandImage' src=' ". $row['mobile_picture']. " '>
-								<div class='gridViewInfoMobile'> <p class='categoryText'>" 
-									. $row['mobile_name'] . "</p>
-								</div>
-							</a>   
-						</div>;
-					";
-				}
-			?>
-			
+	<div class="categoryContainer">
+		<div class="row">
+			<div class="col s12 m12 l12">
+				<h3 id="Head" align="center">Smartphone categories</h3>
+			</div>
 		</div>
-	</div>
+
+		<?php
+			$categoryQuery = mysqli_query($con, "SELECT * FROM category");
+			$count = 0;
+
+			while ($row = mysqli_fetch_array($categoryQuery)) {
+				if($count == 0) {
+					echo " <div class='row cat-right'>
+							<div class='col m4 l5 catName'>
+							<a href='category.php?category_id=" .$row['category_id']. "'>
+							<h2 class='categoryText'>" . $row['category_name'] . "</h2>
+							<p class='categoryText'>" . $row['category_desc'] . "</p>
+							</div>
+							<div class='col m8 l7 second'>
+								<img class='catImage' src=' ". $row['category_photo']. " '>
+							</div>
+							</a>
+						</div>";
+					$count = 1;
+				}
+				else {
+					echo " <div class='row cat-left'>
+							<a href='category.php?category_id=" .$row['category_id']. "'>
+							<div class='col m8 l7 second'>
+								<img class='catImage' src=' ". $row['category_photo']. " '>
+							</div>
+							<div class='col m4 l5 catName'> <h2 id='left-data-h2'>" 
+								. $row['category_name'] . "</h2>
+								<p id='left-data-p'>" . $row['category_desc'] . "</p>
+							</div>
+							</a>
+						</div>";
+					$count = 0;
+				}
+			}
+		?>
 </body>
 <script
   src="https://code.jquery.com/jquery-3.3.1.js"
@@ -80,6 +89,3 @@
 <script type="text/javascript" src="js/materialize.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 </html>
-
-
-
