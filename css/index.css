@@ -285,3 +285,33 @@ body {
 .videoContainer {
 	margin: 10% 0 7% 25%;
 }
+
+#mobile-pros-cons h2 {
+	color: white;
+	text-align : center;
+	padding-top: 2%;
+}
+
+#pros h3 {
+	color: white;
+	text-align : center;
+	padding-top: 1%;
+}
+
+#cons h3 {
+	color: white;
+	text-align : center;
+	padding-top: 1%;
+}
+
+.proscons-div {
+	text-align: center;
+	padding: 0% 25% 0% 25%;
+	font-size: 22px;
+}
+
+.proscons-item {
+	color: #cfd8dc;
+}
+.prosConsContainer {
+}

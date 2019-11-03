@@ -12,6 +12,8 @@
 		private $amazon;
 		private $flipkart;
 		private $review;
+		private $pros;
+		private $cons;
 
 		public function __construct($con, $id) {
 			$this->con = $con;
@@ -32,6 +34,8 @@
 			$this->amazon = $mobile['mobile_amazon'];
 			$this->flipkart = $mobile['mobile_flipkart'];
 			$this->review = $mobile['mobile_review'];
+			$this->pros = $mobile['mobile_pros'];
+			$this->cons = $mobile['mobile_cons'];
 		}
 
 		public function getTitle() {
@@ -72,6 +76,14 @@
 
 		public function getReview() {
 			return $this->review;
+		}
+
+		public function getPros() {
+			return $this->pros;
+		}
+
+		public function getCons() {
+			return $this->cons;
 		}
 
 		public function getQuery() {
