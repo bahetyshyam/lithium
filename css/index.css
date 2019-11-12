@@ -283,7 +283,16 @@ body {
 }
 
 .videoContainer {
-	margin: 10% 0 7% 25%;
+	padding: 5% 0;
+}
+
+#videoFile h2 {
+	margin-bottom: 2%;
+}
+
+#mobile-pros-cons {
+	height: 80vh;
+	padding: 12% 0 0 0;
 }
 
 #mobile-pros-cons h2 {

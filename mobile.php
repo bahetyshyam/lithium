@@ -92,22 +92,19 @@
 			</div>
 		</div>
 	</div>
-
+	<center>
 	<div class="videoContainer">
-		<div class="row">
-			<div id="videoFile" class="col l12">
-				<iframe width="960" height="600" src='<?php echo $mobile->getReview() ?>' frameborder="0"
-					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen></iframe>
-			</div>
+		<div id="videoFile">
+			<h2>Why should you buy the <?php echo $mobile->getTitle(); ?>?</h2>
+			<iframe width="960" height="600" src='<?php echo $mobile->getReview() ?>' frameborder="0"
+				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen></iframe>
 		</div>
 	</div>
+</center>
 
 	<div class="prosConsContainer">
 		<div id="mobile-pros-cons" class="row grey darken-4">
-			<h2>
-				Pros & Cons
-			</h2>
 			<div id="pros" class="col m6 l6">
 				<h3>
 					Pros
