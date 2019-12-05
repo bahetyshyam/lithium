@@ -3,5 +3,30 @@ $('.sideBtn').on("click",function() {
 	$('.sidebar').toggleClass('side');
 });
 
-window.sr = ScrollReveal();
-sr.reveal('#page2');
+$(document).ready(function() {
+	$("#bar").keyup(function() {
+		let input = $(this).val();
+
+		if (input.length > 0) {
+			$.ajax (
+				{
+					url : '../lithium/action.php',
+					method : 'POST',
+					data : {
+						query : input
+					}, 
+					success : function(response) {
+						$("#results").html(response);
+					},
+					dataType : 'text'
+				}
+			);
+		}
+		else
+			$("#results").html('');
+	});
+	$(document).on('click', 'a', function() {
+		$("#bar").val($(this).text());
+		$("#results").html('');
+	});
+});

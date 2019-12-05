@@ -31,28 +31,28 @@
 	<script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
-
-	<div class="navbar-fixed">
+	<!--Navbar begins here -->
+	<div class="navbar-fixed ">
 	    <nav id="navbar" class="black">
-	      <div class="nav-wrapper">
-	        <a href="index.php" id="brand-link" class="brand-logo">Lithium</a>
+	    	<div class="nav-wrapper">
+				<a href="index.html" id="brand-link" class="brand-logo hvr-grow">Lithium</a>
 
-	        <div class="sidebar black">
-	        	<div class="sideItems" id="first">
-	        		<a class="sideLinks" href="brands.php"><i class="medium sideIcons material-icons">search</i>Brands</a>
-	        	</div>
-	        	<div class="sideItems">
-	        		<a class="sideLinks" href="categories.php"><i class="medium sideIcons material-icons">folder</i>Categories</a>
-	        	</div>			
+				<div class="sidebar black">
+					<div class="sideItems" id="first">
+						<a class="sideLinks" href="brands.php"><i class="medium sideIcons material-icons">building</i>Brands</a>
+					</div>
+					<div class="sideItems">
+						<a class="sideLinks" href="search.php"><i class="medium sideIcons material-icons">search</i>Search</a>
+					</div>				
+				</div>
+
+				<a class="sideBtn"></a>
 			</div>
-
-			<a class="sideBtn"></a>
-
-	      </div>
 	    </nav>
 	</div>
+	<!--Navbar ends here -->
 
-	<div class="albumContainer">
+	<div class="backgroundContainer">
 		<div class="entity">
 			<h1 id='Head' align='center'><?php echo $category->getTitle(); ?></h1>
 			<?php
@@ -74,10 +74,8 @@
 		</div>
 	</div>
 </body>
-<script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  		crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/materialize.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 </html>
